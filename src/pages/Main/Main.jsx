@@ -3,11 +3,11 @@ import React from 'react'
 import styles from './styles.module.css'
 import Card from '../../components/Card/Card.jsx'
 
-const Main = () => {
+const Main = ( {balance, setBalance} ) => {
   return (
     <main className={styles.main}>
 
-      <Card />
+      <Card balance={balance} setBalance={setBalance} />
     </main>
   )
 }

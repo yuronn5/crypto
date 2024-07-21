@@ -2,14 +2,14 @@
 import React from 'react'
 import './styles.css'
 
-const Card = () => {
+const Card = ( {balance, setBalance} ) => {
   return (
     <div className="card">
       <div className="card-block">
         <p>CRYPTO-FINANCE</p>
         <button
           onMouseEnter={() => console.log("---enter")}
-        //   onClick={setBalance}
+          onClick={() => setBalance(balance = balance + 100)}
         >
           Add money
         </button>
@@ -17,7 +17,7 @@ const Card = () => {
 
       <div className="card-block">
         <p>Yurii</p>
-        {/* <p>{balance} $</p> */}
+        <p>{balance} $</p>
       </div>
     </div>
   )
