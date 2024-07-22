@@ -4,7 +4,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import Card from '../../components/Card/Card.jsx'
 
-const Main = ( {balance, setBalance} ) => {
+const Main = ( {balance, setBalance, coins} ) => {
   return (
     <main className={styles.main}>
 
