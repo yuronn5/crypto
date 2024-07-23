@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Main coins={coins} balance={balance} setBalance={setBalance} />
+      <Main setCoins={setCoins} coins={coins} balance={balance} setBalance={setBalance} />
     </div>
   )
 }
