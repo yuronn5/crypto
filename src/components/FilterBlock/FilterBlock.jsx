@@ -1,4 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 const FilterBlock = ({ setCoins, coins }) => {
@@ -6,6 +8,14 @@ const FilterBlock = ({ setCoins, coins }) => {
   // const { coins } = coinsContext;
   const [value, setValue] = useState('');
   console.log(value);
+
+  useEffect(() => {
+    const filteredCoins = coins.filter((coin) => {
+      return coin.name.toLowerCase().includes(value.toLowerCase())
+    })
+
+    setCoins(filteredCoins);
+  }, [value]);
 
   return (
     <div className="filter-block">
