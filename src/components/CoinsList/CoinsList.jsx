@@ -7,7 +7,7 @@ const CoinsList = ({ coins }) => {
   return (
     <ul className="coins-list">
       {coins.map((coin) => {
-        return <li key={coin.uuid}>
+        return <li className="coin-item" key={coin.uuid}>
           <div className="coin-item__info">
               <img
                 className="coin-item__logo"
