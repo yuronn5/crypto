@@ -5,14 +5,14 @@ import React from 'react'
 import './styles.css'
 import {WithEuBalance} from '../../helpers/hoc/withEuBalance.jsx';
 
-const Card = ( {balance, setBalance, euBalance} ) => {
+const Card = ( {balance, setBalance} ) => {
   return (
     <div className="card">
       <div className="card-block">
         <p>CRYPTO-FINANCE</p>
         <button
           onMouseEnter={() => console.log("---enter")}
-          onClick={() => setBalance(balance = balance + 100)}
+          onClick={setBalance}
         >
           Add money
         </button>

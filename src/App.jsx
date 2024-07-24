@@ -28,7 +28,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Main setCoins={setFilteredCoins} coins={coins} balance={balance} setBalance={setBalance} filteredCoins={filteredCoins} />
+      <Main setCoins={setFilteredCoins} coins={coins} balance={balance} setBalance={addBalance} filteredCoins={filteredCoins} />
     </div>
   )
 }
