@@ -4,17 +4,16 @@ import { useEffect, useState } from "react";
 import "./styles.css";
 import React from "react";
 
-
 const FilterBlock = ({ setCoins, coins }) => {
   // const coinsContext = useContext(CoinsContext);
   // const { coins } = coinsContext;
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   console.log(value);
 
   useEffect(() => {
     const filteredCoins = coins.filter((coin) => {
-      return coin.name.toLowerCase().includes(value.toLowerCase())
-    })
+      return coin.name.toLowerCase().includes(value.toLowerCase());
+    });
 
     setCoins(filteredCoins);
   }, [value]);

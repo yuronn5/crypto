@@ -1,11 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import './styles.css'
-import {WithEuBalance} from '../../helpers/hoc/withEuBalance.jsx';
+import React from "react";
+import "./styles.css";
+import { WithEuBalance } from "../../helpers/hoc/withEuBalance.jsx";
 
-const Card = ( {balance, setBalance} ) => {
+const Card = ({ balance, setBalance }) => {
   return (
     <div className="card">
       <div className="card-block">
@@ -23,7 +23,7 @@ const Card = ( {balance, setBalance} ) => {
         <p>{balance} $</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default WithEuBalance(Card);

@@ -1,11 +1,9 @@
-import Header from './components/Header/Header.jsx'
-import Main from './pages/Main/Main.jsx'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { getCoins } from './api/api.js'
-import { useCallback } from 'react'
-
-
+import Header from "./components/Header/Header.jsx";
+import Main from "./pages/Main/Main.jsx";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getCoins } from "./api/api.js";
+import { useCallback } from "react";
 
 function App() {
   const [balance, setBalance] = useState(10000);
@@ -28,9 +26,15 @@ function App() {
   return (
     <div>
       <Header />
-      <Main setCoins={setFilteredCoins} coins={coins} balance={balance} setBalance={addBalance} filteredCoins={filteredCoins} />
+      <Main
+        setCoins={setFilteredCoins}
+        coins={coins}
+        balance={balance}
+        setBalance={addBalance}
+        filteredCoins={filteredCoins}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
