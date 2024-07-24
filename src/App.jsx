@@ -3,6 +3,7 @@ import Main from './pages/Main/Main.jsx'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { getCoins } from './api/api.js'
+import { useCallback } from 'react'
 
 
 
@@ -18,6 +19,10 @@ function App() {
       setFilteredCoins(data.coins);
     };
     fetchData();
+  }, []);
+
+  const addBalance = useCallback(() => {
+    setBalance((prev) => prev + 1000);
   }, []);
 
   return (
