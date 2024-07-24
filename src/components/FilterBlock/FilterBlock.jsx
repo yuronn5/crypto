@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import "./styles.css";
+import React from "react";
+
 
 const FilterBlock = ({ setCoins, coins }) => {
   // const coinsContext = useContext(CoinsContext);
@@ -30,4 +32,4 @@ const FilterBlock = ({ setCoins, coins }) => {
   );
 };
 
-export default FilterBlock;
+export default React.memo(FilterBlock);
