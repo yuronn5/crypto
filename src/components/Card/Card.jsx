@@ -1,8 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './styles.css'
-import WithEuBalance from '../../helpers/hoc/withEuBalance.jsx';
+import {WithEuBalance} from '../../helpers/hoc/withEuBalance.jsx';
 
 const Card = ( {balance, setBalance, euBalance} ) => {
   return (
