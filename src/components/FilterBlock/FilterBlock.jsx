@@ -1,25 +1,14 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./styles.css";
-import React from "react";
-import { useContext } from "react";
-import { CoinsContext } from "../../context/coinsContext.jsx";
+import { CoinsContext } from "../../context/coinsContext";
+import { useFilterCoins } from "../../helpers/hooks/useFilterCoins";
 
 const FilterBlock = ({ setCoins }) => {
   const coinsContext = useContext(CoinsContext);
   const { coins } = coinsContext;
 
-  const [value, setValue] = useState("");
-  console.log(value);
-
-  useEffect(() => {
-    const filteredCoins = coins.filter((coin) => {
-      return coin.name.toLowerCase().includes(value.toLowerCase());
-    });
-
-    setCoins(filteredCoins);
-  }, [value]);
+  const { setValue, value } = useFilterCoins(setCoins, coins);
 
   return (
     <div className="filter-block">
