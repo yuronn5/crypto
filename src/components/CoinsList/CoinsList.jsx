@@ -1,11 +1,16 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
+import React, { useContext } from "react";
+import { CoinsContext } from "../../context/coinsContext.jsx";
 import "./styles.css";
 
-const CoinsList = ({ coins }) => {
+const CoinsList = () => {
+  const coinsContext = useContext(CoinsContext);
+  const {filteredCoins} = coinsContext;
+  // console.log(coinsContext);
   return (
     <ul className="coins-list">
-      {coins.map((coin) => {
+      {filteredCoins.map((coin) => {
         return (
           <li className="coin-item" key={coin.uuid}>
             <div className="coin-item__info">

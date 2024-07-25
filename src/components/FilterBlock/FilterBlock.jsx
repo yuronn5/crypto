@@ -3,10 +3,13 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 import React from "react";
+import { useContext } from "react";
+import { CoinsContext } from "../../context/coinsContext.jsx";
 
-const FilterBlock = ({ setCoins, coins }) => {
-  // const coinsContext = useContext(CoinsContext);
-  // const { coins } = coinsContext;
+const FilterBlock = ({ setCoins }) => {
+  const coinsContext = useContext(CoinsContext);
+  const { coins } = coinsContext;
+
   const [value, setValue] = useState("");
   console.log(value);
 
